@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Show all Employee</h1>
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Salery</th>
+                <th scope="col">City</th>
+                <th scope="col">delete</th>
+                <th scope="col">Update</th>
+              </tr>
+            </thead>
+            <tbody>
+            {{#each list}}
+              <tr>
+                <th scope="row">{{this.id}}</th>
+                <td>{{this.Name}}</td>
+                <td>{{this.Salery}}</td>
+                <td>{{this.City}}</td>
+                <td ><a href="/deleteUser/{{this.id}}" class="btn btn-danger">Delete</a></td>
+                <td ><a href="http://localhost:3000/showUser/{{this.id}}" class="btn btn-info">Update</a></td>
+              </tr>
+              {{/each}}
+            </tbody>
+          </table>
+    </div>
+</div>

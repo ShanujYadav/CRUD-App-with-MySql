@@ -1,0 +1,37 @@
+<div class="container">
+    <form method="post" action="http://localhost:3000/updateUser">
+        {{#each list}}
+        <h2>Fill your details</h2>
+        <div class="form-group row">
+            <label for="inputId" class="col-sm-2 col-form-label">id</label>
+            <div class="col-sm-10">
+                <input type="Text" readonly="" class="form-control" value="{{this.id}}" name="id">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="Text" class="form-control" value="{{this.Name}}" name="name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputSalery" class="col-sm-2 col-form-label">Salery</label>
+            <div class="col-sm-10">
+                <input type="Text" class="form-control" value="{{this.Salery}}"name="salery">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputCity" class="col-sm-2 col-form-label">City</label>
+            <div class="col-sm-10">
+                <input type="Text" class="form-control" value="{{this.City}}" name="city">
+            </div>
+        </div>
+                   {{/each}}
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-info">Update</button>
+            </div>
+        </div>
+    </form>
+</div>
